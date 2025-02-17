@@ -8,7 +8,7 @@ import { generateToken } from '../utils.js'
 const ensureDbConnection = async () => {
   try {
     if (mongoose.connection.readyState !== 1) {
-      await mongoose.connect("mongodb+srv://ecsproull765:9wMNPgo4IofE1HWM@nodejs-for-beginners.1ss5p.mongodb.net/")
+      await mongoose.connect(process.env.MONGODB_URI)
     }
   } catch (error) {
     console.error('Error connecting to the database:', error)
