@@ -9,5 +9,7 @@ try {
     console.log(`Running in http://localhost:${port}`)
   })
 } catch (error) {
+  console.log("Error reported from index.js")
+  console.log("Process UIR: " + process.env.MONGODB_URI)
   console.error(error)
 }
